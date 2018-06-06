@@ -1,0 +1,14 @@
+@startuml
+title 基于GitHub的实验管理平台--学生列表用例的顺序图
+actor users
+users->students:学生用户登录
+students->terms:选择相应的学期
+terms->subjects:选择该学期所对应的的课程
+subjectests->grades
+grades->tests
+alt user为老师
+	students -> grades
+	grades -> tests
+	tests --> users:学生信息和实验成绩
+end
+@enduml

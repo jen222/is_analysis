@@ -1,0 +1,22 @@
+@startuml
+
+    actor 图书管理员
+    participant "登录系统"
+    participant "书籍"
+    participant "图书记录"
+    participant "借阅记录"
+    actor "借阅者"
+
+    图书管理员 -> 登录系统: 1:登陆验证
+    activate 图书管理员
+    activate 登录系统
+    登录系统-->图书管理员: 2: 返回登录成功信息
+    deactivate 登录系统
+    deactivate 图书管理员
+
+    图书管理员-> 书籍::          3:录入书籍相关信息
+    activate 图书管理员
+    activate 书籍
+    deactivate 图书管理员
+
+@enduml

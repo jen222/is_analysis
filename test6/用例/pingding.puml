@@ -1,0 +1,10 @@
+@startuml
+title 基于GitHub的实验管理平台--评分用例的顺序图
+actor users
+users-->Subject:选择该学期相关课程
+Subject -> student:该课程对应的学生
+student -> test:评定该学生相关分数
+
+
+test-->student:返回学生实验分数
+@endum

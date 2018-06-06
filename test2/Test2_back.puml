@@ -1,0 +1,7 @@
+@startuml
+left to right direction
+借阅者<<次要参与者>>
+图书管理员<<主要参与者>>
+ :借阅者:-->(归还图书)
+(归还图书)-->:图书管理员:
+@enduml

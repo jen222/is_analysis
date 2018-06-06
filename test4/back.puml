@@ -1,0 +1,36 @@
+@startuml
+          skinparam sequenceArrowThickness 2
+          skinparam roundcorner 20
+          skinparam maxmessagesize 60
+          skinparam sequenceParticipant underline
+
+          actor ":借阅者" as User
+          note left of User #aqu
+          end note
+          actor ":图书管理员" as Lib
+          participant "还书系统" as A
+          participant ":书籍" as B
+          participant ":登陆系统" as C
+          activate A
+          activate B
+          activate C
+          User -> Lib: 1.提交借阅书籍
+          activate User
+          activate Lib
+          Lib -> A: 1.1 处理借阅书籍
+          A -> B: 1.1.1 获取图书信息
+          B --> A: 1.1.1.1  图书信息
+          A -> C: 1.1.2  删除借阅记录
+          deactivate B
+          C -> C:1.1.2.1 检查是否超时
+          deactivate User
+          C -> C:1.1.2.1 删除借阅记
+          deactivate A
+          deactivate B
+          C --> A: 1.1.2.3  删除信息
+          deactivate C
+          activate A
+          A -->Lib:1.1.3 显示归还信息
+          deactivate A
+
+@enduml

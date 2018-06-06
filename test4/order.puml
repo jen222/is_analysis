@@ -1,0 +1,26 @@
+@startuml
+    actor 图书管理员
+    participant "登录系统"
+    participant "图书记录"
+    participant "借阅记录"
+    actor "借阅者"
+    图书管理员 ->
+    activate 图书管理员
+    activate 登录系统
+    登录系统-->图书管理员: 1: 返回登录成功信息
+    deactivate 登录系统
+
+    借阅者 -->图书管理员::                        2:发出预定图书请求
+    activate 借阅者
+    deactivate 借阅者
+    deactivate 图书管理员
+
+    deactivate 图书记录
+    deactivate 图书管理员
+
+    图书管理员->借阅者 ::                        3:预定图书成功，在规定时间取书
+    activate 图书管理员
+    activate 借阅者
+    deactivate 图书管理员
+    deactivate 借阅者
+@enduml

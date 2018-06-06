@@ -1,0 +1,36 @@
+@startuml
+
+actor 图书管理员
+participant "登陆系统"
+participant "图书记录"
+participant "借阅记录"
+actor "借阅者"
+
+图书管理员 -> 登陆系统: 1:验证身份
+activate 图书管理员
+activate 登陆系统
+登陆系统-->图书管理员: 2: 返回信息
+deactivate 登陆系统
+
+借阅者 -->图书管理员::                                                3:发出借书请求
+activate 借阅者
+deactivate 借阅者
+
+
+图书管理员 -> 图书记录::           4:扫描书籍ID
+activate 图书记录
+deactivate 图书管理员
+
+图书记录-->图书管理员::      5:返回该书籍信息
+activate 图书管理员
+deactivate 图书管理员
+
+图书记录->图书记录:6:记录书籍借出
+图书记录-->图书管理员::         6:借阅成功
+deactivate 图书记录
+
+activate 图书管理员
+图书管理员 ->借阅者::                                      7:将书给借阅者
+deactivate 图书管理员
+
+@enduml
