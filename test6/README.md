@@ -37,6 +37,6 @@
 - ### [“修改密码”用例](./用例/修改密码.md),[界面](https://jen222.github.io/is_analysis/test6/ht/修改密码.html)
 - ### [“修改用户信息”用例](./用例/修改用户信息.md),[界面](https://jen222.github.io/is_analysis/test6/ht/修改用户信息.html)
 - ### [“查看用户信息”用例](./用例/查看用户信息.md),[界面](https://jen222.github.io/is_analysis/test6/ht/查看列表.html)
-- ### [“选课系统”用例](./用例/选课系统.md),[界面](https://jen222.github.io/is_analysis/test6/ht/home.html)
+- ### [“选课系统”用例](./用例/选课系统.md),[界面](https://jen222.github.io/is_analysis/test6/ht/选课.html)
 - ### [“登出系统”用例](./用例/登出系统.md),[界面](https://jen222.github.io/is_analysis/test6/ht/登陆系统.html)
 - ### [“登录系统”用例](./用例/登陆系统.md),[界面](https://jen222.github.io/is_analysis/test6/ht/登出系统.html)
